@@ -6,21 +6,21 @@ import { Providers } from "@/components";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Sira | Shop",
-    default: "Home - Sira | Shop",
+    template: "%s - Sira | Store",
+    default: "Home - Sira | Store",
   },
   description: "Una tienda virtual de productos",
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000"),
   openGraph: {
-    title: "Sira | Shop",
+    title: "Sira | Store",
     description: "Una tienda virtual de productos",
     type: "website",
     locale: "es_ES",
-    siteName: "Sira | Shop",
+    siteName: "Sira | Store",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sira | Shop",
+    title: "Sira | Store",
     description: "Una tienda virtual de productos",
   },
   robots: {

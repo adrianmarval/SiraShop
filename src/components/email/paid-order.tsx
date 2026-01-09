@@ -18,7 +18,7 @@ export const PaidOrderEmail = ({ orderId, total, products }: PaidOrderEmailProps
   return (
     <Html>
       <Head />
-      <Preview>¡Pago confirmado para tu pedido en Sira Shop!</Preview>
+      <Preview>¡Pago confirmado para tu pedido en Sira Store!</Preview>
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>¡Pago Recibido!</Heading>

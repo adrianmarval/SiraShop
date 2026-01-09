@@ -50,7 +50,7 @@ export const sentOrderConfirmationEmail = async (
     }),
   );
   await resend.emails.send({
-    from: "Sira Shop <sirashop@giftcardshop.app>",
+    from: "Sira Store <sirastore@giftcardshop.app>",
     to: email,
     subject: `Orden #${orderId.split("-")[0]}`,
     html: emailHtml,
@@ -72,7 +72,7 @@ export const sentPaymentConfirmationEmail = async (
   );
 
   await resend.emails.send({
-    from: "Sira Shop <sirashop@giftcardshop.app>",
+    from: "Sira Store <sirastore@giftcardshop.app>",
     to: email,
     subject: `Orden #${orderId.split("-")[0]}`,
     html: emailHtml,

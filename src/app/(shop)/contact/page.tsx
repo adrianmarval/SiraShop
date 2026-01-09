@@ -3,7 +3,7 @@ import { Title } from "@/components";
 export default function ContactPage() {
   return (
     <div className="mb-10 px-5">
-      <Title title="Contact Us" subtitle="Get in touch with Sira Shop" />
+      <Title title="Contact Us" subtitle="Get in touch with Sira Store" />
 
       <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-8 md:grid-cols-2">
         <div className="rounded-lg bg-gray-100 p-6 shadow-sm">
@@ -13,8 +13,8 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div>
               <span className="block font-semibold">Email:</span>
-              <a href="mailto:support@sirashop.com" className="text-blue-600 hover:underline">
-                support@sirashop.com
+              <a href="mailto:support@sirastore.com" className="text-blue-600 hover:underline">
+                support@sirastore.com
               </a>
             </div>
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
             <div>
               <span className="block font-semibold">Address:</span>
               <p>
-                Sira Shop HQ
+                Sira Store HQ
                 <br />
                 123 Commerce St.
                 <br />

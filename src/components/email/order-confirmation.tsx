@@ -18,7 +18,7 @@ export const OrderConfirmationEmail = ({ orderId, total, products }: OrderConfir
   return (
     <Html>
       <Head />
-      <Preview>Gracias por tu pedido en Sira Shop</Preview>
+      <Preview>Gracias por tu pedido en Sira Store</Preview>
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>Confirmación de Pedido</Heading>

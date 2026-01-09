@@ -7,9 +7,10 @@ interface PaginationOptions {
   page?: number;
   take?: number;
   gender?: Gender;
+  query?: string;
 }
 
-export const getPaginatedProductsWithImages = async ({ page = 1, take = 12, gender }: PaginationOptions) => {
+export const getPaginatedProductsWithImages = async ({ page = 1, take = 12, gender, query = "" }: PaginationOptions) => {
   if (isNaN(Number(page))) page = 1;
   if (page < 1) page = 1;
 
@@ -26,9 +27,16 @@ export const getPaginatedProductsWithImages = async ({ page = 1, take = 12, gend
           },
         },
       },
-      //! Por género
+      //! Por género o query
       where: {
         gender: gender,
+        OR: query
+          ? [
+              { title: { contains: query, mode: "insensitive" } },
+              { slug: { contains: query, mode: "insensitive" } },
+              { description: { contains: query, mode: "insensitive" } },
+            ]
+          : undefined,
       },
     });
 
@@ -37,6 +45,13 @@ export const getPaginatedProductsWithImages = async ({ page = 1, take = 12, gend
     const totalCount = await prisma.product.count({
       where: {
         gender: gender,
+        OR: query
+          ? [
+              { title: { contains: query, mode: "insensitive" } },
+              { slug: { contains: query, mode: "insensitive" } },
+              { description: { contains: query, mode: "insensitive" } },
+            ]
+          : undefined,
       },
     });
 

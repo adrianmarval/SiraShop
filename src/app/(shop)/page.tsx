@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: "Sira | Shop",
+  title: "Sira | Store",
   description: "Tienda de ropa virtual para hombres, mujeres y niños",
 };
 

@@ -12,7 +12,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import "./slideshow.css";
-import Image from "next/image";
 import { ProductImage } from "../product-image/ProductImage";
 
 interface Props {
@@ -29,7 +28,7 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
       <Swiper
         style={
           {
-            "--swiper-navigation-color": "#fff",
+            "--swiper-navigation-color": "#343333ff",
             "--swiper-pagination-color": "#fff",
           } as React.CSSProperties
         }
