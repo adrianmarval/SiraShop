@@ -1,34 +1,28 @@
+export { deleteUserAddress } from "./address/delete-user-address";
+export { getUserAddress } from "./address/get-user-address";
+export { setUserAddress } from "./address/set-user-address";
 
-export * from './address/delete-user-address';
-export * from './address/get-user-address';
-export * from './address/set-user-address';
+export { authenticate, login } from "./auth/login";
+export { logout } from "./auth/logout";
+export { registerUser } from "./auth/register";
 
+export { getCategories } from "./category/get-categories";
 
+export { getCountries } from "./country/get-countries";
 
+export { placeOrder } from "./order/place-order";
+export { getOrderById } from "./order/get-order-by-id";
+export { getPaginatedOrders } from "./order/get-paginated-orders";
+export { getOrdersByUser } from "./order/get-orders-by-user";
 
-export * from './auth/login';
-export * from './auth/logout';
-export * from './auth/register';
+export { setTransactionId } from "./payments/set-transaction-id";
+export { paypalCheckPayment } from "./payments/paypal-check-payment";
 
-export * from './category/get-categories';
+export { deleteProductImage } from "./product/delete-product-image";
+export { createUpdateProduct } from "./product/create-update-product";
+export { getProductBySlug } from "./product/get-product-by-slug";
+export { getStockBySlug } from "./product/get-stock-by-slug";
+export { getPaginatedProductsWithImages } from "./product/product-pagination";
 
-export * from './country/get-countries';
-
-export * from './order/place-order';
-export * from './order/get-order-by-id';
-export * from './order/get-paginated-orders';
-export * from './order/get-orders-by-user';
-
-export * from './payments/set-transaction-id';
-export * from './payments/paypal-check-payment';
-
-
-export * from './product/delete-product-image';
-export * from './product/create-update-product';
-export * from './product/get-product-by-slug';
-export * from './product/get-stock-by-slug';
-export * from './product/product-pagination';
-
-
-export * from './user/change-user-role';
-export * from './user/get-paginater-users';
+export { changeUserRole } from "./user/change-user-role";
+export { getPaginatedUsers } from "./user/get-paginater-users";

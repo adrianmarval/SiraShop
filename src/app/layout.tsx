@@ -7,16 +7,12 @@ import { Providers } from "@/components";
 export const metadata: Metadata = {
   title: {
     template: "%s - Sira | Shop",
-    default: "Home - Teslo | Shop",
+    default: "Home - Sira | Shop",
   },
   description: "Una tienda virtual de productos",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
