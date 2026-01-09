@@ -35,7 +35,7 @@ export default async function ProfilePage() {
   const user = session.user;
 
   return (
-    <main className="flex items-center justify-center p-4">
+    <main className="mt-10 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Card principal */}
         <Card>

@@ -106,7 +106,6 @@ const verifyPayPalPayment = async (paypalTransactionId: string, bearerToken: str
       ...requestOptions,
       cache: "no-store",
     }).then((r) => r.json());
-    console.log({ resp });
     return resp;
   } catch (error) {
     console.log(error);
