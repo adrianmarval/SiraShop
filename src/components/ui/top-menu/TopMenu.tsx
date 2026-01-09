@@ -18,7 +18,7 @@ export const TopMenu = () => {
   }, []);
 
   return (
-    <nav className="flex w-full items-center justify-between px-5">
+    <nav aria-label="Main Navigation" className="flex w-full items-center justify-between px-5">
       {/* Logo */}
       <div>
         <Link href="/">

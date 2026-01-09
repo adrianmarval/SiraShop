@@ -37,6 +37,7 @@ export const Sidebar = () => {
 
       {/* Sidemenu */}
       <nav
+        aria-label="Sidebar Navigation"
         className={clsx("fixed right-0 top-0 z-20 h-screen w-[500px] transform bg-white p-5 shadow-2xl transition-all duration-300", {
           "translate-x-full": !isSideMenuOpen,
         })}
@@ -78,7 +79,10 @@ export const Sidebar = () => {
         )}
 
         {isAuthenticated && (
-          <button className="mt-10 flex w-full items-center rounded p-2 transition-all hover:bg-gray-100" onClick={() => logout()}>
+          <button
+            className="mt-10 flex w-full items-center rounded p-2 transition-all hover:bg-gray-100"
+            onClick={() => logout().then(() => window.location.reload())}
+          >
             <IoLogOutOutline size={30} />
             <span className="ml-3 text-xl">Salir</span>
           </button>

@@ -3,6 +3,7 @@ import prisma from "@/lib/prisma";
 
 import { auth } from "@/auth.config";
 import type { Address, Size } from "@/interfaces";
+import { sentOrderConfirmationEmail } from "@/services/mail";
 
 interface ProductToOrder {
   productId: string;
@@ -12,6 +13,7 @@ interface ProductToOrder {
 
 export const placeOrder = async (productIds: ProductToOrder[], address: Address) => {
   const session = await auth();
+
   const userId = session?.user.id;
 
   // Verificar sesión de usuario
@@ -28,6 +30,11 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address)
     where: {
       id: {
         in: productIds.map((p) => p.productId),
+      },
+    },
+    include: {
+      ProductImage: {
+        take: 1,
       },
     },
   });
@@ -127,6 +134,44 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address)
         orderAddress: orderAddress,
       };
     });
+
+    // Enviar correo de confirmación
+    try {
+      const { order, updatedProducts, orderAddress } = prismaTx;
+      const userEmail = session.user.email;
+
+      if (userEmail) {
+        const emailProducts = productIds.map((p) => {
+          const product = updatedProducts.find((prod) => prod.id === p.productId);
+          // Assuming the first image is the one we want or fallback
+          // Since we updated the stock, the product object is from the update result which usually doesn't return relations unless included.
+          // Wait, the transaction returns 'updatedProducts'.
+          // 'updatedProducts' is the result of 'tx.product.update'. Does it return ProductImage?
+          // Prisma update does NOT return relations by default unless using 'include'.
+          // But 'products' (the initial query) DOES have it if I add include there.
+
+          const originalProduct = products.find((prod) => prod.id === p.productId);
+          const image = originalProduct?.ProductImage[0]?.url;
+
+          return {
+            title: originalProduct?.title ?? "",
+            price: originalProduct?.price ?? 0,
+            quantity: p.quantity,
+            size: p.size,
+            image: image
+              ? image.startsWith("http")
+                ? image
+                : `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/products/${image}`
+              : "",
+          };
+        });
+
+        await sentOrderConfirmationEmail(userEmail, order.id, order.total, emailProducts);
+      }
+    } catch (error) {
+      console.log("Error sending email:", error);
+      // We don't want to fail the order if email fails
+    }
 
     return {
       ok: true,

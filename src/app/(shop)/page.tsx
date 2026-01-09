@@ -1,5 +1,6 @@
 export const revalidate = 60; // 60 segundos
 
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { getPaginatedProductsWithImages } from "@/actions";
@@ -10,6 +11,11 @@ interface Props {
     page?: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: "Sira | Shop",
+  description: "Tienda de ropa virtual para hombres, mujeres y niños",
+};
 
 export default async function Home({ searchParams }: Props) {
   const page = searchParams.page ? parseInt(searchParams.page) : 1;

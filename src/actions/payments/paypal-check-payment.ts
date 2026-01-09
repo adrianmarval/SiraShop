@@ -3,6 +3,7 @@
 import prisma from "@/lib/prisma";
 import { PayPalOrderStatusResponse } from "@/interfaces";
 import { revalidatePath } from "next/cache";
+import { sentPaymentConfirmationEmail } from "@/services/mail";
 
 export const paypalCheckPayment = async (paypalTransactionId: string) => {
   const authToken = await getPayPalBearerToken();
@@ -35,13 +36,54 @@ export const paypalCheckPayment = async (paypalTransactionId: string) => {
 
   // TODO: Realizar la actualización en nuestra base de datos
   try {
-    await prisma.order.update({
+    const updatedOrder = await prisma.order.update({
       where: { id: orderId },
       data: {
         isPaid: true,
         paidAt: new Date(),
       },
+      include: {
+        user: true,
+        OrderItem: {
+          include: {
+            product: {
+              include: {
+                ProductImage: {
+                  take: 1,
+                },
+              },
+            },
+          },
+        },
+      },
     });
+
+    // Enviar correo de pago confirmado
+    try {
+      const { user, OrderItem } = updatedOrder;
+      const userEmail = user.email;
+
+      if (userEmail) {
+        const emailProducts = OrderItem.map((item) => {
+          const image = item.product.ProductImage[0]?.url;
+          return {
+            title: item.product.title,
+            price: item.price,
+            quantity: item.quantity,
+            size: item.size,
+            image: image
+              ? image.startsWith("http")
+                ? image
+                : `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/products/${image}`
+              : "",
+          };
+        });
+
+        await sentPaymentConfirmationEmail(userEmail, updatedOrder.id, updatedOrder.total, emailProducts);
+      }
+    } catch (error) {
+      console.log("Error sending payment email:", error);
+    }
 
     // TODO: Revalidar un path
     revalidatePath(`/orders/${orderId}`);

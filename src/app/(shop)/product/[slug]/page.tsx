@@ -44,8 +44,23 @@ export default async function ProductBySlugPage({ params }: Props) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: product.images.map((image) => `/products/${image}`),
+    offers: {
+      "@type": "Offer",
+      price: product.price,
+      priceCurrency: "USD",
+      availability: product.inStock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+    },
+  };
+
   return (
     <div className="mb-20 mt-5 grid grid-cols-1 gap-3 md:grid-cols-3">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Slideshow */}
       <div className="col-span-1 md:col-span-2">
         {/* Mobile Slideshow */}

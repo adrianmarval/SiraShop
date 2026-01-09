@@ -10,7 +10,7 @@ export default function TermsConditionsPage() {
           <h2 className="mb-2 text-xl font-bold">1. Agreement to Terms</h2>
           <p>
             These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity
-            (“you”) and Sira Shop ("we," "us," or "our"), concerning your access to and use of our website.
+            (“you”) and Sira Shop (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), concerning your access to and use of our website.
           </p>
         </section>
 

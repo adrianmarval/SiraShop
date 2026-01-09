@@ -10,6 +10,23 @@ export const metadata: Metadata = {
     default: "Home - Sira | Shop",
   },
   description: "Una tienda virtual de productos",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000"),
+  openGraph: {
+    title: "Sira | Shop",
+    description: "Una tienda virtual de productos",
+    type: "website",
+    locale: "es_ES",
+    siteName: "Sira | Shop",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sira | Shop",
+    description: "Una tienda virtual de productos",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <div className="mb-10 flex w-full flex-wrap justify-center space-x-4 px-4 text-xs">
+    <footer className="mb-10 flex w-full flex-wrap justify-center space-x-4 px-4 text-xs">
       <Link href="/">
         <span className={`${titleFont.className} font-bold antialiased`}>Sira </span>
         <span>| shop </span>
@@ -29,6 +29,6 @@ export const Footer = () => {
       <Link href="/contact" className="hover:underline">
         Contact Us
       </Link>
-    </div>
+    </footer>
   );
 };
