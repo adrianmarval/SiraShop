@@ -42,8 +42,8 @@ export default function RefundPolicyPage() {
           <h2 className="mb-2 text-xl font-bold">Exchanges</h2>
           <p>
             We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at{" "}
-            <a href="mailto:support@sirastore.com" className="text-blue-600 hover:underline">
-              support@sirastore.com
+            <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
+              support@crowdfast.store
             </a>
             .
           </p>
@@ -51,7 +51,7 @@ export default function RefundPolicyPage() {
 
         <section>
           <h2 className="mb-2 text-xl font-bold">Shipping</h2>
-          <p>To return your product, you should mail your product to: returns@sirastore.com.</p>
+          <p>To return your product, you should mail your product to: returns@crowdfast.store.</p>
           <p className="mt-2">
             You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If
             you receive a refund, the cost of return shipping will be deducted from your refund.

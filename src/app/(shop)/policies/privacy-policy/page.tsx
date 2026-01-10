@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="mb-2 text-xl font-bold">1. Introduction</h2>
           <p>
-            Welcome to Sira Store. We respect your privacy and are committed to protecting your personal data. This privacy policy will
+            Welcome to Crowdfast Store. We respect your privacy and are committed to protecting your personal data. This privacy policy will
             inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how
             the law protects you.
           </p>
@@ -73,8 +73,8 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-2 text-xl font-bold">6. Contact Us</h2>
           <p>
             If you have any questions about this privacy policy or our privacy practices, please contact us at:{" "}
-            <a href="mailto:support@sirastore.com" className="text-blue-600 hover:underline">
-              support@sirastore.com
+            <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
+              support@crowdfast.store
             </a>
             .
           </p>

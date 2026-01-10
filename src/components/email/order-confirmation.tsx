@@ -1,5 +1,4 @@
 import { Body, Container, Head, Heading, Html, Preview, Section, Text, Hr, Row, Column } from "@react-email/components";
-import Image from "next/image";
 import * as React from "react";
 
 interface OrderConfirmationEmailProps {
@@ -18,7 +17,7 @@ export const OrderConfirmationEmail = ({ orderId, total, products }: OrderConfir
   return (
     <Html>
       <Head />
-      <Preview>Gracias por tu pedido en Sira Store</Preview>
+      <Preview>Gracias por tu pedido en Crowdfast Store</Preview>
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>Confirmación de Pedido</Heading>
@@ -30,13 +29,7 @@ export const OrderConfirmationEmail = ({ orderId, total, products }: OrderConfir
             {products.map((product, index) => (
               <Row key={index} style={{ marginBottom: "10px" }}>
                 <Column style={{ width: "60px" }}>
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width="50"
-                    height="50"
-                    style={{ objectFit: "cover", borderRadius: "4px" }}
-                  />
+                  <img src={product.image} alt={product.title} width="50" height="50" style={{ objectFit: "cover", borderRadius: "4px" }} />
                 </Column>
                 <Column>
                   <Text style={productTitle}>

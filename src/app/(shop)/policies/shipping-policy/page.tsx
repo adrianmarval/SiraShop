@@ -27,7 +27,7 @@ export default function ShippingPolicyPage() {
           <p>
             We currently ship to select international countries. Shipping charges for your order will be calculated and displayed at
             checkout. Your order may be subject to import duties and taxes (including VAT), which are incurred once a shipment reaches your
-            destination country. Sira Store is not responsible for these charges if they are applied and are your responsibility as the
+            destination country. Crowdfast Store is not responsible for these charges if they are applied and are your responsibility as the
             customer.
           </p>
         </section>
@@ -54,8 +54,8 @@ export default function ShippingPolicyPage() {
             We accept returns up to 30 days after delivery, if the item is unused and in its original condition, and we will refund the full
             order amount minus the shipping costs for the return. In the event that your order arrives damaged in any way, please email us
             as soon as possible at{" "}
-            <a href="mailto:support@sirastore.com" className="text-blue-600 hover:underline">
-              support@sirastore.com
+            <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
+              support@crowdfast.store
             </a>{" "}
             with your order number and a photo of the item’s condition.
           </p>

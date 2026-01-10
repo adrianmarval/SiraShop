@@ -34,7 +34,7 @@ export const TopMenu = () => {
       {/* Logo */}
       <div>
         <Link href="/">
-          <span className={`${titleFont.className} font-bold antialiased`}>Sira</span>
+          <span className={`${titleFont.className} font-bold antialiased`}>Crowdfast</span>
           <span> | Store</span>
         </Link>
       </div>

@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="mb-10 flex w-full flex-wrap justify-center space-x-4 px-4 text-xs">
       <Link href="/">
-        <span className={`${titleFont.className} font-bold antialiased`}>Sira </span>
+        <span className={`${titleFont.className} font-bold antialiased`}>Crowdfast </span>
         <span>| Store </span>
         <span>© {new Date().getFullYear()}</span>
       </Link>

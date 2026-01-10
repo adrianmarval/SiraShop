@@ -10,7 +10,8 @@ export default function TermsConditionsPage() {
           <h2 className="mb-2 text-xl font-bold">1. Agreement to Terms</h2>
           <p>
             These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity
-            (“you”) and Sira Store (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), concerning your access to and use of our website.
+            (“you”) and Crowdfast Store (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), concerning your access to and use of our
+            website.
           </p>
         </section>
 
@@ -59,8 +60,8 @@ export default function TermsConditionsPage() {
           <p>
             In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact
             us at:{" "}
-            <a href="mailto:support@sirastore.com" className="text-blue-600 hover:underline">
-              support@sirastore.com
+            <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
+              support@crowdfast.store
             </a>
             .
           </p>

@@ -1,0 +1,257 @@
+
+> crowdfast-store@0.1.0 build
+> npm run prisma:deploy && next build
+
+
+> crowdfast-store@0.1.0 prisma:deploy
+> npx prisma migrate deploy && prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "sira-store", schema "public" at "localhost:5432"
+
+10 migrations found in prisma/migrations
+
+
+No pending migrations to apply.
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 34ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Curious about the SQL queries Prisma ORM generates? Optimize helps you enhance your visibility: https://pris.ly/tip-2-optimize
+
+  ▲ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./src/components/email/order-confirmation.tsx
+32:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/email/paid-order.tsx
+34:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/26) ...
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/policies/privacy-policy". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/policies/privacy-policy". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/policies/shipping-policy". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/policies/shipping-policy". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/products". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/products". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/policies/terms-conditions". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/policies/terms-conditions". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (6/26) 
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/cart". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/cart". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/empty". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/empty". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/profile". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/profile". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/policies/refund-policy". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/policies/refund-policy". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/contact". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/contact". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (12/26) 
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/admin". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/admin". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (19/26) 
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/checkout". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/checkout". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/checkout/address". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/checkout/address". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/search". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at a (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:24095)
+    at d (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/978.js:1:35078)
+    at h (/Users/sam/Documents/proyectos/next-sira-store/.next/server/chunks/434.js:1:12054)
+    at nj (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/sam/Documents/proyectos/next-sira-store/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+
+Error occurred prerendering page "/search". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ ✓ Generating static pages (26/26)
+
+> Export encountered errors on following paths:
+	/(shop)/admin/page: /admin
+	/(shop)/cart/page: /cart
+	/(shop)/checkout/(checkout)/page: /checkout
+	/(shop)/checkout/address/page: /checkout/address
+	/(shop)/contact/page: /contact
+	/(shop)/empty/page: /empty
+	/(shop)/page: /
+	/(shop)/policies/privacy-policy/page: /policies/privacy-policy
+	/(shop)/policies/refund-policy/page: /policies/refund-policy
+	/(shop)/policies/shipping-policy/page: /policies/shipping-policy
+	/(shop)/policies/terms-conditions/page: /policies/terms-conditions
+	/(shop)/products/page: /products
+	/(shop)/profile/page: /profile
+	/(shop)/search/page: /search

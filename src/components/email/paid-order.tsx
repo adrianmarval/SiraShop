@@ -18,7 +18,7 @@ export const PaidOrderEmail = ({ orderId, total, products }: PaidOrderEmailProps
   return (
     <Html>
       <Head />
-      <Preview>¡Pago confirmado para tu pedido en Sira Store!</Preview>
+      <Preview>¡Pago confirmado para tu pedido en Crowdfast Store!</Preview>
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>¡Pago Recibido!</Heading>
@@ -31,13 +31,7 @@ export const PaidOrderEmail = ({ orderId, total, products }: PaidOrderEmailProps
             {products.map((product, index) => (
               <Row key={index} style={{ marginBottom: "10px" }}>
                 <Column style={{ width: "60px" }}>
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width="50"
-                    height="50"
-                    style={{ objectFit: "cover", borderRadius: "4px" }}
-                  />
+                  <img src={product.image} alt={product.title} width="50" height="50" style={{ objectFit: "cover", borderRadius: "4px" }} />
                 </Column>
                 <Column>
                   <Text style={productTitle}>

@@ -50,9 +50,9 @@ export const sentOrderConfirmationEmail = async (
     }),
   );
   await resend.emails.send({
-    from: "Sira Store <sirastore@giftcardshop.app>",
+    from: "Crowdfast Store <crowdfaststore@giftcardshop.app>",
     to: email,
-    subject: `Orden #${orderId.split("-")[0]}`,
+    subject: `Orden #${orderId.split("-")[0]} - Confirmación de Orden`,
     html: emailHtml,
   });
 };
@@ -72,9 +72,9 @@ export const sentPaymentConfirmationEmail = async (
   );
 
   await resend.emails.send({
-    from: "Sira Store <sirastore@giftcardshop.app>",
+    from: "Crowdfast Store <crowdfaststore@giftcardshop.app>",
     to: email,
-    subject: `Orden #${orderId.split("-")[0]}`,
+    subject: `Orden #${orderId.split("-")[0]} - Recibo de Pago`,
     html: emailHtml,
   });
 };
