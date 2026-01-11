@@ -92,5 +92,152 @@
     "orderConfirmationSubject": "Orden #{orderId} - Confirmación de Orden",
     "paymentReceiptSubject": "Orden #{orderId} - Recibo de Pago",
     "invoiceSubject": "Factura de Orden #{orderId} - Crowdfast Store"
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidad",
+    "subtitle": "Cómo manejamos tus datos",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducción",
+        "content": "Bienvenido a Crowdfast Store. Respetamos su privacidad y nos comprometemos a proteger sus datos personales. Esta política de privacidad le informará sobre cómo cuidamos sus datos personales cuando visita nuestro sitio web y le informará sobre sus derechos de privacidad y cómo la ley lo protege."
+      },
+      "dataCollected": {
+        "title": "2. Datos que recopilamos",
+        "content": "Podemos recopilar, utilizar, almacenar y transferir diferentes tipos de datos personales sobre usted que hemos agrupado de la siguiente manera:",
+        "identity": "Datos de identidad: incluye nombre, apellido, nombre de usuario o identificador similar.",
+        "contact": "Datos de contacto: incluye dirección de facturación, dirección de entrega, dirección de correo electrónico y números de teléfono.",
+        "transaction": "Datos de transacción: incluye detalles sobre pagos hacia y desde usted y otros detalles de los productos que nos ha comprado."
+      },
+      "usage": {
+        "title": "3. Cómo usamos sus datos",
+        "content": "Solo usaremos sus datos personales cuando la ley lo permita. Por lo general, utilizaremos sus datos personales en las siguientes circunstancias:",
+        "contract": "Cuando necesitemos ejecutar el contrato que estamos a punto de celebrar o que hemos celebrado con usted.",
+        "legitimate": "Cuando sea necesario para nuestros intereses legítimos (o los de un tercero) y sus intereses y derechos fundamentales no prevalezcan sobre esos intereses.",
+        "legal": "Cuando necesitemos cumplir con una obligación legal o reglamentaria."
+      },
+      "payment": {
+        "title": "4. Procesamiento de pagos (Stripe)",
+        "content": "Utilizamos Stripe para pagos, análisis y otros servicios comerciales. Stripe recopila información de identificación sobre los dispositivos que se conectan a sus servicios. Stripe utiliza esta información para operar y mejorar los servicios que nos brinda, incluida la detección de fraudes. Puede obtener más información sobre Stripe y leer su política de privacidad en <link>https://stripe.com/privacy</link>."
+      },
+      "security": {
+        "title": "5. Seguridad de datos",
+        "content": "Hemos implementado medidas de seguridad adecuadas para evitar que sus datos personales se pierdan accidentalmente, se utilicen o se acceda a ellos de forma no autorizada, se alteren o se divulguen."
+      },
+      "contact": {
+        "title": "6. Contáctenos",
+        "content": "Si tiene alguna pregunta sobre esta política de privacidad o nuestras prácticas de privacidad, contáctenos en: support@crowdfast.store."
+      }
+    }
+  },
+  "TermsConditions": {
+    "title": "Términos y Condiciones",
+    "subtitle": "Reglas y regulaciones",
+    "sections": {
+      "agreement": {
+        "title": "1. Acuerdo de Términos",
+        "content": "Estos Términos y Condiciones constituyen un acuerdo legalmente vinculante entre usted, ya sea personalmente o en nombre de una entidad (\"usted\") y Crowdfast Store (\"nosotros\", \"nos\" o \"nuestro\"), con respecto a su acceso y uso de nuestro sitio web."
+      },
+      "ip": {
+        "title": "2. Derechos de Propiedad Intelectual",
+        "content": "A menos que se indique lo contrario, el Sitio y todo el código fuente, bases de datos, funcionalidad, software, diseños de sitios web, audio, video, texto, fotografías y gráficos en el Sitio (colectivamente, el \"Contenido\") y las marcas comerciales, marcas de servicio y logotipos contenidos en ellos (las \"Marcas\") son propiedad nuestra o están controlados por nosotros o tienen licencia para nosotros."
+      },
+      "userRepresentations": {
+        "title": "3. Representaciones del usuario",
+        "content": "Al utilizar el Sitio, usted declara y garantiza que: (1) toda la información de registro que envíe será verdadera, precisa, actual y completa; (2) mantendrá la precisión de dicha información y actualizará de inmediato dicha información de registro según sea necesario."
+      },
+      "products": {
+        "title": "4. Productos",
+        "content": "Hacemos todo lo posible para mostrar con la mayor precisión posible los colores, características, especificaciones y detalles de los productos disponibles en el Sitio. Sin embargo, no garantizamos que los colores, características, especificaciones y detalles de los productos sean precisos, completos, confiables, actuales o libres de otros errores."
+      },
+      "payment": {
+        "title": "5. Compras y Pagos",
+        "content": "Aceptamos las siguientes formas de pago: Visa, Mastercard, American Express, Discover y PayPal. Usted acepta proporcionar información de compra y de cuenta actual, completa y precisa para todas las compras realizadas a través del Sitio."
+      },
+      "returns": {
+        "title": "6. Política de Devoluciones",
+        "content": "Revise nuestra Política de devoluciones publicada en el Sitio antes de realizar cualquier compra."
+      },
+      "contact": {
+        "title": "7. Contáctenos",
+        "content": "Para resolver una queja relacionada con el Sitio o para recibir más información sobre el uso del Sitio, contáctenos en: support@crowdfast.store."
+      }
+    }
+  },
+  "RefundPolicy": {
+    "title": "Política de Reembolso",
+    "subtitle": "Nuestra política de devoluciones y cancelaciones",
+    "sections": {
+      "returns": {
+        "title": "Devoluciones",
+        "content1": "Nuestra política tiene una duración de 30 días. Si han pasado 30 días desde su compra, lamentablemente no podemos ofrecerle un reembolso o cambio.",
+        "content2": "Para ser elegible para una devolución, su artículo debe estar sin usar y en las mismas condiciones en que lo recibió. También debe estar en el embalaje original."
+      },
+      "refunds": {
+        "title": "Reembolsos (si corresponde)",
+        "content1": "Una vez recibida e inspeccionada su devolución, le enviaremos un correo electrónico para notificarle que hemos recibido su artículo devuelto. También le notificaremos la aprobación o rechazo de su reembolso.",
+        "content2": "Si es aprobado, se procesará su reembolso y se aplicará automáticamente un crédito a su tarjeta de crédito o método de pago original, dentro de una cierta cantidad de días."
+      },
+      "lateRefunds": {
+        "title": "Reembolsos tardíos o faltantes",
+        "content": "Si aún no ha recibido un reembolso, primero verifique su cuenta bancaria nuevamente. Luego comuníquese con la compañía de su tarjeta de crédito, puede tomar algún tiempo antes de que su reembolso se publique oficialmente. A continuación, póngase en contacto con su banco. A menudo hay un tiempo de procesamiento antes de que se publique un reembolso."
+      },
+      "exchanges": {
+        "title": "Cambios",
+        "content": "Solo reemplazamos los artículos si están defectuosos o dañados. Si necesita cambiarlo por el mismo artículo, envíenos un correo electrónico a support@crowdfast.store."
+      },
+      "shipping": {
+        "title": "Envíos",
+        "content1": "Para devolver su producto, debe enviarlo por correo a: returns@crowdfast.store.",
+        "content2": "Usted será responsable de pagar sus propios costos de envío para devolver su artículo. Los costos de envío no son reembolsables. Si recibe un reembolso, el costo del envío de devolución se deducirá de su reembolso."
+      }
+    }
+  },
+  "ShippingPolicy": {
+    "title": "Política de Envío",
+    "subtitle": "Información de entrega y seguimiento",
+    "sections": {
+      "processing": {
+        "title": "Tiempo de procesamiento",
+        "content": "Todos los pedidos se procesan dentro de 1 a 3 días hábiles (excluyendo fines de semana y días festivos) después de recibir el correo electrónico de confirmación de su pedido. Recibirá otra notificación cuando su pedido haya sido enviado."
+      },
+      "rates": {
+        "title": "Tarifas y estimaciones de envío nacional",
+        "content": "Ofrecemos envío con tarifa fija por $5.99 en todos los pedidos nacionales de menos de $50. Los pedidos de más de $50 incluyen envío estándar gratuito. Las estimaciones de entrega suelen ser de 3 a 7 días hábiles, según su ubicación."
+      },
+      "international": {
+        "title": "Envío internacional",
+        "content": "Actualmente realizamos envíos a países internacionales seleccionados. Los gastos de envío de su pedido se calcularán y mostrarán al finalizar la compra. Su pedido puede estar sujeto a aranceles e impuestos de importación (incluido el IVA), que se incurren una vez que el envío llega a su país de destino. Crowdfast Store no es responsable de estos cargos si se aplican y son su responsabilidad como cliente."
+      },
+      "status": {
+        "title": "¿Cómo verifico el estado de mi pedido?",
+        "content": "Cuando su pedido haya sido enviado, recibirá una notificación por correo electrónico de nosotros que incluirá un número de seguimiento que puede utilizar para verificar su estado. Espere 48 horas para que la información de seguimiento esté disponible."
+      },
+      "poBoxes": {
+        "title": "Envío a apartados postales",
+        "content": "Algunos transportistas tienen limitaciones para enviar a apartados postales. Si uno de nuestros transportistas se encuentra en este grupo, debe buscar su política."
+      },
+      "returns": {
+        "title": "Reembolsos, devoluciones y cambios",
+        "content": "Aceptamos devoluciones hasta 30 días después de la entrega, si el artículo no se usa y está en su estado original, y reembolsaremos el monto total del pedido menos los costos de envío de la devolución. En caso de que su pedido llegue dañado de alguna manera, envíenos un correo electrónico lo antes posible a support@crowdfast.store con su número de pedido y una foto de la condición del artículo."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contáctanos",
+    "subtitle": "Ponte en contacto con Crowdfast Store",
+    "support": {
+      "title": "Atención al cliente",
+      "content": "Estamos aquí para ayudarte. Si tienes alguna pregunta, inquietud o comentario, por favor contáctanos.",
+      "email": "Email:",
+      "phone": "Teléfono:",
+      "address": "Dirección:"
+    },
+    "businessHours": {
+      "title": "Horario de atención",
+      "weekdays": "Lunes - Viernes: 9:00 AM - 5:00 PM EST",
+      "saturday": "Sábados: 10:00 AM - 2:00 PM EST",
+      "sunday": "Domingos: Cerrado"
+    },
+    "footer": "Para recibir asistencia más rápida, ten a mano tu número de pedido cuando nos contactes."
   }
 }

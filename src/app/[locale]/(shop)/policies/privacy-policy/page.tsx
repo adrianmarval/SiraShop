@@ -1,78 +1,68 @@
 import { Title } from "@/components";
+import { useTranslations } from "next-intl";
 
 export default function PrivacyPolicyPage() {
+  const t = useTranslations("PrivacyPolicy");
+
   return (
     <div className="mb-10 px-5">
-      <Title title="Privacy Policy" subtitle="How we handle your data" />
+      <Title title={t("title")} subtitle={t("subtitle")} />
 
       <div className="mx-auto max-w-[800px] space-y-6 text-gray-700">
         <section>
-          <h2 className="mb-2 text-xl font-bold">1. Introduction</h2>
-          <p>
-            Welcome to Crowdfast Store. We respect your privacy and are committed to protecting your personal data. This privacy policy will
-            inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how
-            the law protects you.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.introduction.title")}</h2>
+          <p>{t("sections.introduction.content")}</p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">2. Data We Collect</h2>
-          <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.dataCollected.title")}</h2>
+          <p>{t("sections.dataCollected.content")}</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li>
-              <strong>Identity Data:</strong> includes first name, last name, username or similar identifier.
+              <strong>{t("sections.dataCollected.identity").split(":")[0]}:</strong> {t("sections.dataCollected.identity").split(":")[1]}
             </li>
             <li>
-              <strong>Contact Data:</strong> includes billing address, delivery address, email address and telephone numbers.
+              <strong>{t("sections.dataCollected.contact").split(":")[0]}:</strong> {t("sections.dataCollected.contact").split(":")[1]}
             </li>
             <li>
-              <strong>Transaction Data:</strong> includes details about payments to and from you and other details of products you have
-              purchased from us.
+              <strong>{t("sections.dataCollected.transaction").split(":")[0]}:</strong>{" "}
+              {t("sections.dataCollected.transaction").split(":")[1]}
             </li>
           </ul>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">3. How We Use Your Data</h2>
-          <p>
-            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following
-            circumstances:
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.usage.title")}</h2>
+          <p>{t("sections.usage.content")}</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-            <li>
-              Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do
-              not override those interests.
-            </li>
-            <li>Where we need to comply with a legal or regulatory obligation.</li>
+            <li>{t("sections.usage.contract")}</li>
+            <li>{t("sections.usage.legitimate")}</li>
+            <li>{t("sections.usage.legal")}</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">4. Payment Processing (Stripe)</h2>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.payment.title")}</h2>
           <p>
-            We use Stripe for payment, analytics, and other business services. Stripe collects identifying information about the devices
-            that connect to its services. Stripe uses this information to operate and improve the services it provides to us, including for
-            fraud detection. You can learn more about Stripe and read its privacy policy at{" "}
-            <a href="https://stripe.com/privacy" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
-              https://stripe.com/privacy
-            </a>
-            .
+            {t.rich("sections.payment.content", {
+              link: (chunks) => (
+                <a href="https://stripe.com/privacy" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+                  {chunks}
+                </a>
+              ),
+            })}
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">5. Data Security</h2>
-          <p>
-            We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed
-            in an unauthorized way, altered or disclosed.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.security.title")}</h2>
+          <p>{t("sections.security.content")}</p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">6. Contact Us</h2>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.contact.title")}</h2>
           <p>
-            If you have any questions about this privacy policy or our privacy practices, please contact us at:{" "}
+            {t("sections.contact.content").split(": support@crowdfast.store")[0]}:{" "}
             <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
               support@crowdfast.store
             </a>

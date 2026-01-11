@@ -92,5 +92,152 @@
     "orderConfirmationSubject": "Order #{orderId} - Order Confirmation",
     "paymentReceiptSubject": "Order #{orderId} - Payment Receipt",
     "invoiceSubject": "Invoice for Order #{orderId} - Crowdfast Store"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "How we handle your data",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "Welcome to Crowdfast Store. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you."
+      },
+      "dataCollected": {
+        "title": "2. Data We Collect",
+        "content": "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:",
+        "identity": "Identity Data: includes first name, last name, username or similar identifier.",
+        "contact": "Contact Data: includes billing address, delivery address, email address and telephone numbers.",
+        "transaction": "Transaction Data: includes details about payments to and from you and other details of products you have purchased from us."
+      },
+      "usage": {
+        "title": "3. How We Use Your Data",
+        "content": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:",
+        "contract": "Where we need to perform the contract we are about to enter into or have entered into with you.",
+        "legitimate": "Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.",
+        "legal": "Where we need to comply with a legal or regulatory obligation."
+      },
+      "payment": {
+        "title": "4. Payment Processing (Stripe)",
+        "content": "We use Stripe for payment, analytics, and other business services. Stripe collects identifying information about the devices that connect to its services. Stripe uses this information to operate and improve the services it provides to us, including for fraud detection. You can learn more about Stripe and read its privacy policy at <link>https://stripe.com/privacy</link>."
+      },
+      "security": {
+        "title": "5. Data Security",
+        "content": "We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed."
+      },
+      "contact": {
+        "title": "6. Contact Us",
+        "content": "If you have any questions about this privacy policy or our privacy practices, please contact us at: support@crowdfast.store."
+      }
+    }
+  },
+  "TermsConditions": {
+    "title": "Terms & Conditions",
+    "subtitle": "Rules and regulations",
+    "sections": {
+      "agreement": {
+        "title": "1. Agreement to Terms",
+        "content": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Crowdfast Store (\"we,\" \"us,\" or \"our\"), concerning your access to and use of our website."
+      },
+      "ip": {
+        "title": "2. Intellectual Property Rights",
+        "content": "Unless otherwise indicated, the Site and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us."
+      },
+      "userRepresentations": {
+        "title": "3. User Representations",
+        "content": "By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary."
+      },
+      "products": {
+        "title": "4. Products",
+        "content": "We make every effort to display as accurately as possible the colors, features, specifications, and details of the products available on the Site. However, we do not guarantee that the colors, features, specifications, and details of the products will be accurate, complete, reliable, current, or free of other errors."
+      },
+      "payment": {
+        "title": "5. Purchases and Payment",
+        "content": "We accept the following forms of payment: Visa, Mastercard, American Express, Discover, and PayPal. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Site."
+      },
+      "returns": {
+        "title": "6. Return Policy",
+        "content": "Please review our Return Policy posted on the Site prior to making any purchases."
+      },
+      "contact": {
+        "title": "7. Contact Us",
+        "content": "In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at: support@crowdfast.store."
+      }
+    }
+  },
+  "RefundPolicy": {
+    "title": "Refund Policy",
+    "subtitle": "Our returns and cancellation policy",
+    "sections": {
+      "returns": {
+        "title": "Returns",
+        "content1": "Our policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.",
+        "content2": "To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging."
+      },
+      "refunds": {
+        "title": "Refunds (if applicable)",
+        "content1": "Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.",
+        "content2": "If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days."
+      },
+      "lateRefunds": {
+        "title": "Late or missing refunds",
+        "content": "If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, it may take some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund is posted."
+      },
+      "exchanges": {
+        "title": "Exchanges",
+        "content": "We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at support@crowdfast.store."
+      },
+      "shipping": {
+        "title": "Shipping",
+        "content1": "To return your product, you should mail your product to: returns@crowdfast.store.",
+        "content2": "You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund."
+      }
+    }
+  },
+  "ShippingPolicy": {
+    "title": "Shipping Policy",
+    "subtitle": "Delivery and tracking information",
+    "sections": {
+      "processing": {
+        "title": "Processing Time",
+        "content": "All orders are processed within 1 to 3 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped."
+      },
+      "rates": {
+        "title": "Domestic Shipping Rates and Estimates",
+        "content": "We offer fixed rate shipping for $5.99 on all domestic orders under $50. Orders over $50 include free standard shipping. Delivery estimates are usually between 3-7 business days depending on your location."
+      },
+      "international": {
+        "title": "International Shipping",
+        "content": "We currently ship to select international countries. Shipping charges for your order will be calculated and displayed at checkout. Your order may be subject to import duties and taxes (including VAT), which are incurred once a shipment reaches your destination country. Crowdfast Store is not responsible for these charges if they are applied and are your responsibility as the customer."
+      },
+      "status": {
+        "title": "How do I check the status of my order?",
+        "content": "When your order has shipped, you will receive an email notification from us which will include a tracking number you can use to check its status. Please allow 48 hours for the tracking information to become available."
+      },
+      "poBoxes": {
+        "title": "Shipping to P.O. boxes",
+        "content": "Some carriers have limitations around shipping to P.O. Boxes. If one of our carriers falls into this group, you should look up their policy."
+      },
+      "returns": {
+        "title": "Refunds, returns, and exchanges",
+        "content": "We accept returns up to 30 days after delivery, if the item is unused and in its original condition, and we will refund the full order amount minus the shipping costs for the return. In the event that your order arrives damaged in any way, please email us as soon as possible at support@crowdfast.store with your order number and a photo of the item’s condition."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with Crowdfast Store",
+    "support": {
+      "title": "Customer Support",
+      "content": "We are here to help you. If you have any questions, concerns, or feedback, please reach out to us.",
+      "email": "Email:",
+      "phone": "Phone:",
+      "address": "Address:"
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday: 9:00 AM - 5:00 PM EST",
+      "saturday": "Saturday: 10:00 AM - 2:00 PM EST",
+      "sunday": "Sunday: Closed"
+    },
+    "footer": "For faster assistance, please have your order number ready when contacting us."
   }
 }

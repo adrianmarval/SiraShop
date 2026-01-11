@@ -1,47 +1,35 @@
 import { Title } from "@/components";
+import { useTranslations } from "next-intl";
 
 export default function RefundPolicyPage() {
+  const t = useTranslations("RefundPolicy");
+
   return (
     <div className="mb-10 px-5">
-      <Title title="Refund Policy" subtitle="Our returns and cancellation policy" />
+      <Title title={t("title")} subtitle={t("subtitle")} />
 
       <div className="mx-auto max-w-[800px] space-y-6 text-gray-700">
         <section>
-          <h2 className="mb-2 text-xl font-bold">Returns</h2>
-          <p>
-            Our policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.
-          </p>
-          <p className="mt-2">
-            To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the
-            original packaging.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.returns.title")}</h2>
+          <p>{t("sections.returns.content1")}</p>
+          <p className="mt-2">{t("sections.returns.content2")}</p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">Refunds (if applicable)</h2>
-          <p>
-            Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We
-            will also notify you of the approval or rejection of your refund.
-          </p>
-          <p className="mt-2">
-            If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or
-            original method of payment, within a certain amount of days.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.refunds.title")}</h2>
+          <p>{t("sections.refunds.content1")}</p>
+          <p className="mt-2">{t("sections.refunds.content2")}</p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">Late or missing refunds</h2>
-          <p>
-            If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, it may take
-            some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund
-            is posted.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.lateRefunds.title")}</h2>
+          <p>{t("sections.lateRefunds.content")}</p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">Exchanges</h2>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.exchanges.title")}</h2>
           <p>
-            We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at{" "}
+            {t("sections.exchanges.content").split("support@crowdfast.store")[0]}
             <a href="mailto:support@crowdfast.store" className="text-blue-600 hover:underline">
               support@crowdfast.store
             </a>
@@ -50,12 +38,9 @@ export default function RefundPolicyPage() {
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-bold">Shipping</h2>
-          <p>To return your product, you should mail your product to: returns@crowdfast.store.</p>
-          <p className="mt-2">
-            You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If
-            you receive a refund, the cost of return shipping will be deducted from your refund.
-          </p>
+          <h2 className="mb-2 text-xl font-bold">{t("sections.shipping.title")}</h2>
+          <p>{t("sections.shipping.content1")}</p>
+          <p className="mt-2">{t("sections.shipping.content2")}</p>
         </section>
       </div>
     </div>
