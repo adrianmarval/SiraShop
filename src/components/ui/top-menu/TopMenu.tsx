@@ -1,18 +1,24 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 
-import Link from "next/link";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { IoCartOutline, IoCloseOutline } from "react-icons/io5";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 
 import { titleFont } from "@/config/fonts";
 import { useCartStore, useUIStore } from "@/store";
 import { Input } from "@/components/ui/input";
 
 export const TopMenu = () => {
+  const t = useTranslations("TopMenu");
+  const locale = useLocale();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const pathname = usePathname();
+  // useSearchParams stays from next/navigation as next-intl doesn't wrap it directly in typical setup,
+  // but let's check if I need to import it from next/navigation.
+  // Yes, I deleted the import above. Let me re-add useSearchParams from next/navigation.
+  const searchParams = useSearchParams();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const openSideMenu = useUIStore((state) => state.openSideMenu);
@@ -42,13 +48,13 @@ export const TopMenu = () => {
       {/* Center Menu */}
       <div className="hidden sm:block">
         <Link className="m-2 rounded-md p-2 transition-all hover:bg-gray-100" href="/gender/men">
-          Hombres
+          {t("men")}
         </Link>
         <Link className="m-2 rounded-md p-2 transition-all hover:bg-gray-100" href="/gender/women">
-          Mujeres
+          {t("women")}
         </Link>
         <Link className="m-2 rounded-md p-2 transition-all hover:bg-gray-100" href="/gender/kid">
-          Niños
+          {t("kids")}
         </Link>
       </div>
 
@@ -61,7 +67,7 @@ export const TopMenu = () => {
         <div className="relative mx-2">
           <Input
             type="text"
-            placeholder="Buscar..."
+            placeholder={t("search")}
             value={term}
             className="w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-1 transition-all focus:border-blue-500 focus:outline-none"
             onChange={(e) => {
@@ -122,8 +128,24 @@ export const TopMenu = () => {
         </Link>
 
         <button onClick={openSideMenu} className="m-2 rounded-md p-2 transition-all hover:bg-gray-100">
-          Menú
+          {t("menu")}
         </button>
+
+        {/* Language Switcher */}
+        <div className="mx-2 flex items-center gap-2">
+          <button
+            onClick={() => router.replace(pathname, { locale: "en" })}
+            className={`rounded px-2 py-1 ${locale === "en" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => router.replace(pathname, { locale: "es" })}
+            className={`rounded px-2 py-1 ${locale === "es" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
+          >
+            ES
+          </button>
+        </div>
       </div>
     </nav>
   );

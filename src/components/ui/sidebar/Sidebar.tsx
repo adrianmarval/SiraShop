@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import clsx from "clsx";
 import { useSession } from "next-auth/react";
 import {
@@ -18,6 +19,7 @@ import { useUIStore } from "@/store";
 import { logout } from "@/actions";
 
 export const Sidebar = () => {
+  const t = useTranslations("Sidebar");
   const isSideMenuOpen = useUIStore((state) => state.isSideMenuOpen);
   const closeMenu = useUIStore((state) => state.closeSideMenu);
 
@@ -49,7 +51,7 @@ export const Sidebar = () => {
           <IoSearchOutline size={20} className="absolute left-2 top-2" />
           <input
             type="text"
-            placeholder="Buscar"
+            placeholder={t("search")}
             className="w-full rounded border-b-2 border-gray-200 bg-gray-50 py-1 pl-10 pr-10 text-xl focus:border-blue-500 focus:outline-none"
           />
         </div>
@@ -64,7 +66,7 @@ export const Sidebar = () => {
               className="mt-10 flex items-center rounded p-2 transition-all hover:bg-gray-100"
             >
               <IoPersonOutline size={30} />
-              <span className="ml-3 text-xl">Perfil</span>
+              <span className="ml-3 text-xl">{t("profile")}</span>
             </Link>
 
             <Link
@@ -73,7 +75,7 @@ export const Sidebar = () => {
               className="mt-10 flex items-center rounded p-2 transition-all hover:bg-gray-100"
             >
               <IoTicketOutline size={30} />
-              <span className="ml-3 text-xl">Ordenes</span>
+              <span className="ml-3 text-xl">{t("orders")}</span>
             </Link>
           </>
         )}
@@ -84,7 +86,7 @@ export const Sidebar = () => {
             onClick={() => logout().then(() => window.location.reload())}
           >
             <IoLogOutOutline size={30} />
-            <span className="ml-3 text-xl">Salir</span>
+            <span className="ml-3 text-xl">{t("logout")}</span>
           </button>
         )}
 
@@ -95,7 +97,7 @@ export const Sidebar = () => {
             onClick={() => closeMenu()}
           >
             <IoLogInOutline size={30} />
-            <span className="ml-3 text-xl">Ingresar</span>
+            <span className="ml-3 text-xl">{t("login")}</span>
           </Link>
         )}
 
@@ -110,7 +112,7 @@ export const Sidebar = () => {
               className="mt-10 flex items-center rounded p-2 transition-all hover:bg-gray-100"
             >
               <IoShirtOutline size={30} />
-              <span className="ml-3 text-xl">Productos</span>
+              <span className="ml-3 text-xl">{t("products")}</span>
             </Link>
 
             <Link
@@ -119,7 +121,7 @@ export const Sidebar = () => {
               className="mt-10 flex items-center rounded p-2 transition-all hover:bg-gray-100"
             >
               <IoTicketOutline size={30} />
-              <span className="ml-3 text-xl">Ordenes</span>
+              <span className="ml-3 text-xl">{t("orders")}</span>
             </Link>
 
             <Link
@@ -128,7 +130,7 @@ export const Sidebar = () => {
               className="mt-10 flex items-center rounded p-2 transition-all hover:bg-gray-100"
             >
               <IoPeopleOutline size={30} />
-              <span className="ml-3 text-xl">Usuarios</span>
+              <span className="ml-3 text-xl">{t("users")}</span>
             </Link>
           </>
         )}

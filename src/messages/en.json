@@ -1,0 +1,57 @@
+{
+  "TopMenu": {
+    "men": "Men",
+    "women": "Women",
+    "kids": "Kids",
+    "search": "Search...",
+    "menu": "Menu"
+  },
+  "Sidebar": {
+    "search": "Search",
+    "profile": "Profile",
+    "orders": "Orders",
+    "logout": "Logout",
+    "login": "Login",
+    "products": "Products",
+    "users": "Users"
+  },
+  "Footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "refund": "Refund Policy",
+    "shipping": "Shipping Policy",
+    "contact": "Contact Us"
+  },
+  "Home": {
+    "title": "Store",
+    "subtitle": "All products"
+  },
+  "Auth": {
+    "loginTitle": "Login",
+    "email": "Email",
+    "password": "Password",
+    "errorCredentials": "Credentials are not correct",
+    "createAccount": "Create a new account",
+    "or": "Or"
+  },
+  "Orders": {
+    "title": "Orders",
+    "fullName": "Full Name",
+    "status": "Status",
+    "options": "Options",
+    "paid": "Paid",
+    "notPaid": "Not Paid",
+    "viewOrder": "View Order"
+  },
+  "Order": {
+    "orderNumber": "Order #",
+    "deliveryAddress": "Delivery Address",
+    "orderSummary": "Order Summary",
+    "itemsCount": "No. Products",
+    "item": "item",
+    "items": "items",
+    "subtotal": "Subtotal",
+    "taxes": "Taxes",
+    "total": "Total"
+  }
+}

@@ -1,7 +1,10 @@
 import { titleFont } from "@/config/fonts";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="mb-10 flex w-full flex-wrap justify-center space-x-4 px-4 text-xs">
       <Link href="/">
@@ -11,23 +14,23 @@ export const Footer = () => {
       </Link>
 
       <Link href="/policies/privacy-policy" className="hover:underline">
-        Privacy Policy
+        {t("privacy")}
       </Link>
 
       <Link href="/policies/terms-conditions" className="hover:underline">
-        Terms & Conditions
+        {t("terms")}
       </Link>
 
       <Link href="/policies/refund-policy" className="hover:underline">
-        Refund Policy
+        {t("refund")}
       </Link>
 
       <Link href="/policies/shipping-policy" className="hover:underline">
-        Shipping Policy
+        {t("shipping")}
       </Link>
 
       <Link href="/contact" className="hover:underline">
-        Contact Us
+        {t("contact")}
       </Link>
     </footer>
   );

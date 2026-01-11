@@ -4,11 +4,13 @@ export const revalidate = 0;
 import { getOrdersByUser } from "@/actions";
 import { Title } from "@/components";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { redirect } from "next/navigation";
 import { IoCardOutline } from "react-icons/io5";
+import { getTranslations } from "next-intl/server";
 
 export default async function OrdersPage() {
+  const t = await getTranslations("Orders");
   const { ok, orders = [] } = await getOrdersByUser();
 
   if (!ok) {
@@ -17,7 +19,7 @@ export default async function OrdersPage() {
 
   return (
     <>
-      <Title title="Orders" />
+      <Title title={t("title")} />
 
       <div className="mb-10">
         <table className="min-w-full">
@@ -27,13 +29,13 @@ export default async function OrdersPage() {
                 #ID
               </th>
               <th scope="col" className="px-6 py-4 text-left text-sm font-medium text-gray-900">
-                Nombre completo
+                {t("fullName")}
               </th>
               <th scope="col" className="px-6 py-4 text-left text-sm font-medium text-gray-900">
-                Estado
+                {t("status")}
               </th>
               <th scope="col" className="px-6 py-4 text-left text-sm font-medium text-gray-900">
-                Opciones
+                {t("options")}
               </th>
             </tr>
           </thead>
@@ -48,18 +50,18 @@ export default async function OrdersPage() {
                   {order.isPaid ? (
                     <>
                       <IoCardOutline className="text-green-800" />
-                      <span className="mx-2 text-green-800">Pagada</span>
+                      <span className="mx-2 text-green-800">{t("paid")}</span>
                     </>
                   ) : (
                     <>
                       <IoCardOutline className="text-red-800" />
-                      <span className="mx-2 text-red-800">No Pagada</span>
+                      <span className="mx-2 text-red-800">{t("notPaid")}</span>
                     </>
                   )}
                 </td>
                 <td className="px-6 text-sm font-light text-gray-900">
                   <Link href={`/orders/${order.id}`} className="hover:underline">
-                    Ver orden
+                    {t("viewOrder")}
                   </Link>
                 </td>
               </tr>

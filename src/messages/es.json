@@ -1,0 +1,57 @@
+{
+  "TopMenu": {
+    "men": "Hombres",
+    "women": "Mujeres",
+    "kids": "Niños",
+    "search": "Buscar...",
+    "menu": "Menú"
+  },
+  "Sidebar": {
+    "search": "Buscar",
+    "profile": "Perfil",
+    "orders": "Ordenes",
+    "logout": "Salir",
+    "login": "Ingresar",
+    "products": "Productos",
+    "users": "Usuarios"
+  },
+  "Footer": {
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "refund": "Política de Reembolso",
+    "shipping": "Política de Envío",
+    "contact": "Contáctanos"
+  },
+  "Home": {
+    "title": "Tienda",
+    "subtitle": "Todos los productos"
+  },
+  "Auth": {
+    "loginTitle": "Ingresar",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "errorCredentials": "Las credenciales no son correctas",
+    "createAccount": "Crear una nueva cuenta",
+    "or": "O"
+  },
+  "Orders": {
+    "title": "Ordenes",
+    "fullName": "Nombre completo",
+    "status": "Estado",
+    "options": "Opciones",
+    "paid": "Pagada",
+    "notPaid": "No Pagada",
+    "viewOrder": "Ver orden"
+  },
+  "Order": {
+    "orderNumber": "Orden #",
+    "deliveryAddress": "Dirección de entrega",
+    "orderSummary": "Resumen de orden",
+    "itemsCount": "No. Productos",
+    "item": "artículo",
+    "items": "artículos",
+    "subtotal": "Subtotal",
+    "taxes": "Impuestos",
+    "total": "Total"
+  }
+}
