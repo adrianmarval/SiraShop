@@ -19,7 +19,8 @@ export default async function AddressPage({ params }: Props) {
   const session = await auth();
 
   if (!session?.user) {
-    return <h3 className="text-5xl">500 - No hay sesión de usuario</h3>;
+    const tErrors = await getTranslations("Errors");
+    return <h3 className="text-5xl">{tErrors("noSession")}</h3>;
   }
 
   const userAddress = (await getUserAddress(session.user.id)) ?? undefined;

@@ -32,7 +32,10 @@
     "password": "Password",
     "errorCredentials": "Credentials are not correct",
     "createAccount": "Create a new account",
-    "or": "Or"
+    "or": "Or",
+    "newAccount": "New Account",
+    "fullName": "Full Name",
+    "submitRegister": "Create account"
   },
   "Orders": {
     "title": "Orders",
@@ -269,5 +272,71 @@
     "title": "Whoops! We are very sorry.",
     "description": "You can return to ",
     "link": "home"
+  },
+  "Product": {
+    "description": "Description",
+    "addToCart": "Add to cart",
+    "selectSize": "You must select a size*",
+    "availableSizes": "Available sizes"
+  },
+  "ServerActions": {
+    "userCreated": "User created",
+    "userCreateError": "Could not create user",
+    "loginError": "Could not login",
+    "addressSaveError": "Could not save address",
+    "addressDeleteError": "Could not delete address",
+    "imageLoadError": "Could not load images, rolling back",
+    "productCreateUpdateError": "Check logs, could not update/create",
+    "fsDeleteError": "Cannot delete images from FS",
+    "imageDeleteError": "Could not delete image",
+    "noSession": "No user session",
+    "productNotExist": "{id} does not exist - 500",
+    "noQuantity": "{id} has no defined quantity",
+    "insufficientInventory": "{title} has insufficient inventory",
+    "orderNotFound": "Order with id {id} not found",
+    "transactionUpdateError": "Could not update transaction id",
+    "adminRequired": "Must be authenticated as admin",
+    "roleUpdateError": "Could not update role, check logs"
+  },
+  "OrderStatus": {
+    "paid": "Paid",
+    "pending": "Not paid"
+  },
+  "StockLabel": {
+    "stock": "Stock"
+  },
+  "OrderConfirmationEmail": {
+    "subject": "Thank you for your order",
+    "title": "Order Confirmation",
+    "message": "Thank you for your purchase! Your order",
+    "received": "has been received successfully.",
+    "quantity": "Quantity:",
+    "total": "Total:",
+    "policyTitle": "How can I check my order status?",
+    "policyText": "When your order ships, you will receive an email notification with a tracking number to check its status. Tracking information will be available within 48 hours.",
+    "footer": "If you have any questions, feel free to contact us."
+  },
+  "PaidOrderEmail": {
+    "subject": "Payment confirmed for your order at Crowdfast Store!",
+    "title": "Payment Received!",
+    "text": "We have successfully received payment for your order",
+    "processing": "We will start processing your order soon.",
+    "quantity": "Quantity:",
+    "totalPaid": "Total Paid:",
+    "footer": "If you have any questions, feel free to contact us."
+  },
+  "Errors": {
+    "noSession": "500 - No user session"
+  },
+  "Search": {
+    "title": "Search Results",
+    "subtitle": "Search: {query}"
+  },
+  "Profile": {
+    "email": "Email",
+    "verification": "Verification",
+    "verified": "Email verified",
+    "pending": "Pending verification",
+    "secure": "Secure profile • Protected data"
   }
 }

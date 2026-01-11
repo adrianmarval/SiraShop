@@ -5,11 +5,14 @@ import { v2 as cloudinary } from "cloudinary";
 import { revalidatePath } from "next/cache";
 cloudinary.config(process.env.CLOUDINARY_URL ?? "");
 
+import { getTranslations } from "next-intl/server";
+
 export const deleteProductImage = async (imageId: number, imageUrl: string) => {
+  const t = await getTranslations("ServerActions");
   if (!imageUrl.startsWith("http")) {
     return {
       ok: false,
-      error: "No se pueden borrar imagenes de FS",
+      error: t("fsDeleteError"),
     };
   }
 
@@ -38,7 +41,7 @@ export const deleteProductImage = async (imageId: number, imageUrl: string) => {
     console.log(error);
     return {
       ok: false,
-      message: "No se pudo eliminar la imagen",
+      message: t("imageDeleteError"),
     };
   }
 };

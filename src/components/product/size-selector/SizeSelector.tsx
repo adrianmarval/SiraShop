@@ -1,4 +1,5 @@
 import type { Size } from "@/interfaces";
+import { useTranslations } from "next-intl";
 import clsx from "clsx";
 
 interface Props {
@@ -9,9 +10,11 @@ interface Props {
 }
 
 export const SizeSelector = ({ selectedSize, availableSizes, onSizeChanged }: Props) => {
+  const t = useTranslations("Product");
+
   return (
     <div className="my-5">
-      <h3 className="mb-4 font-bold">Tallas disponibles</h3>
+      <h3 className="mb-4 font-bold">{t("availableSizes")}</h3>
 
       <div className="flex">
         {availableSizes.map((size) => (

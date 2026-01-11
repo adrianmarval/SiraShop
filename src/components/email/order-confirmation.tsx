@@ -13,37 +13,21 @@ interface OrderConfirmationEmailProps {
     size: string;
     image: string;
   }[];
+  translations: {
+    subject: string;
+    title: string;
+    message: string;
+    received: string;
+    quantity: string;
+    total: string;
+    policyTitle: string;
+    policyText: string;
+    footer: string;
+  };
 }
 
-export const OrderConfirmationEmail = ({ orderId, total, locale = "es", products }: OrderConfirmationEmailProps) => {
-  const messages = {
-    es: {
-      subject: "Gracias por tu pedido",
-      title: "Confirmación de Pedido",
-      message: "¡Gracias por tu compra! Tu pedido",
-      received: "ha sido recibido exitosamente.",
-      quantity: "Cantidad:",
-      total: "Total:",
-      policyTitle: "¿Cómo puedo verificar el estado de mi pedido?",
-      policyText:
-        "Cuando su pedido se haya enviado, recibirá una notificación por correo electrónico con un número de seguimiento para consultar su estado. La información de seguimiento tardará 48 horas en estar disponible.",
-      footer: "Si tienes alguna pregunta, no dudes en contactarnos.",
-    },
-    en: {
-      subject: "Thank you for your order",
-      title: "Order Confirmation",
-      message: "Thank you for your purchase! Your order",
-      received: "has been received successfully.",
-      quantity: "Quantity:",
-      total: "Total:",
-      policyTitle: "How can I check my order status?",
-      policyText:
-        "When your order ships, you will receive an email notification with a tracking number to check its status. Tracking information will be available within 48 hours.",
-      footer: "If you have any questions, feel free to contact us.",
-    },
-  };
-
-  const t = messages[locale] || messages.es;
+export const OrderConfirmationEmail = ({ orderId, total, locale = "es", products, translations }: OrderConfirmationEmailProps) => {
+  const t = translations;
   const currency = "USD";
 
   return (

@@ -2,7 +2,10 @@
 
 import prisma from "@/lib/prisma";
 
+import { getTranslations } from "next-intl/server";
+
 export const setTransactionId = async (orderId: string, transactionId: string) => {
+  const t = await getTranslations("ServerActions");
   try {
     const order = await prisma.order.update({
       where: { id: orderId },
@@ -12,7 +15,7 @@ export const setTransactionId = async (orderId: string, transactionId: string) =
     if (!order) {
       return {
         ok: false,
-        message: `No se encontró una orden con el ${orderId}`,
+        message: t("orderNotFound", { id: orderId }),
       };
     }
 
@@ -22,7 +25,7 @@ export const setTransactionId = async (orderId: string, transactionId: string) =
 
     return {
       ok: false,
-      message: "No se pudo actualizar el id de la transacción",
+      message: t("transactionUpdateError"),
     };
   }
 };

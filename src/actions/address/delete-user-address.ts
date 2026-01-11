@@ -2,7 +2,10 @@
 
 import prisma from "@/lib/prisma";
 
+import { getTranslations } from "next-intl/server";
+
 export const deleteUserAddress = async (userId: string) => {
+  const t = await getTranslations("ServerActions");
   try {
     const deleted = await prisma.userAddress.delete({
       where: { userId },
@@ -14,7 +17,7 @@ export const deleteUserAddress = async (userId: string) => {
 
     return {
       ok: false,
-      message: "No se pudo eliminar la direccion",
+      message: t("addressDeleteError"),
     };
   }
 };

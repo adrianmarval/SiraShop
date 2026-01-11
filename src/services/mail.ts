@@ -45,12 +45,26 @@ export const sentOrderConfirmationEmail = async (
   products: { title: string; price: number; quantity: number; size: string; image: string }[],
   locale: "es" | "en" = "es",
 ) => {
+  const tTemplate = await getTranslations({ locale, namespace: "OrderConfirmationEmail" });
+  const translations = {
+    subject: tTemplate("subject"),
+    title: tTemplate("title"),
+    message: tTemplate("message"),
+    received: tTemplate("received"),
+    quantity: tTemplate("quantity"),
+    total: tTemplate("total"),
+    policyTitle: tTemplate("policyTitle"),
+    policyText: tTemplate("policyText"),
+    footer: tTemplate("footer"),
+  };
+
   const emailHtml = await render(
     OrderConfirmationEmail({
       orderId: orderId,
       total: total,
       products: products,
       locale: locale,
+      translations: translations,
     }),
   );
   const t = await getTranslations({ locale, namespace: "Email" });
@@ -69,12 +83,24 @@ export const sentPaymentConfirmationEmail = async (
   products: { title: string; price: number; quantity: number; size: string; image: string }[],
   locale: "es" | "en" = "es",
 ) => {
+  const tTemplate = await getTranslations({ locale, namespace: "PaidOrderEmail" });
+  const translations = {
+    subject: tTemplate("subject"),
+    title: tTemplate("title"),
+    text: tTemplate("text"),
+    processing: tTemplate("processing"),
+    quantity: tTemplate("quantity"),
+    totalPaid: tTemplate("totalPaid"),
+    footer: tTemplate("footer"),
+  };
+
   const emailHtml = await render(
     PaidOrderEmail({
       orderId: orderId,
       total: total,
       products: products,
       locale: locale,
+      translations: translations,
     }),
   );
 

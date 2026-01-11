@@ -3,7 +3,10 @@
 import prisma from "@/lib/prisma";
 import bcryptjs from "bcryptjs";
 
+import { getTranslations } from "next-intl/server";
+
 export const registerUser = async (name: string, email: string, password: string) => {
+  const t = await getTranslations("ServerActions");
   try {
     const user = await prisma.user.create({
       data: {
@@ -21,14 +24,14 @@ export const registerUser = async (name: string, email: string, password: string
     return {
       ok: true,
       user: user,
-      message: "Usuario creado",
+      message: t("userCreated"),
     };
   } catch (error) {
     console.log(error);
 
     return {
       ok: false,
-      message: "No se pudo crear el usuario",
+      message: t("userCreateError"),
     };
   }
 };

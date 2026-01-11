@@ -7,6 +7,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { login, registerUser } from "@/actions";
 import { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 type FormInputs = {
   name: string;
   email: string;
@@ -14,6 +16,7 @@ type FormInputs = {
 };
 
 export const RegisterForm = () => {
+  const t = useTranslations("Auth");
   const [errorMessage, setErrorMessage] = useState("");
   const {
     register,
@@ -45,7 +48,7 @@ export const RegisterForm = () => {
         )
       } */}
 
-      <label htmlFor="email">Nombre completo</label>
+      <label htmlFor="email">{t("fullName")}</label>
       <input
         className={clsx("mb-5 rounded border bg-gray-200 px-5 py-2", {
           "border-red-500": errors.name,
@@ -55,7 +58,7 @@ export const RegisterForm = () => {
         {...register("name", { required: true })}
       />
 
-      <label htmlFor="email">Correo electrónico</label>
+      <label htmlFor="email">{t("email")}</label>
       <input
         className={clsx("mb-5 rounded border bg-gray-200 px-5 py-2", {
           "border-red-500": errors.email,
@@ -64,7 +67,7 @@ export const RegisterForm = () => {
         {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
       />
 
-      <label htmlFor="email">Contraseña</label>
+      <label htmlFor="email">{t("password")}</label>
       <input
         className={clsx("mb-5 rounded border bg-gray-200 px-5 py-2", {
           "border-red-500": errors.password,
@@ -75,17 +78,17 @@ export const RegisterForm = () => {
 
       <span className="text-red-500">{errorMessage} </span>
 
-      <button className="btn-primary">Crear cuenta</button>
+      <button className="btn-primary">{t("submitRegister")}</button>
 
       {/* divisor l ine */}
       <div className="my-5 flex items-center">
         <div className="flex-1 border-t border-gray-500"></div>
-        <div className="px-2 text-gray-800">O</div>
+        <div className="px-2 text-gray-800">{t("or")}</div>
         <div className="flex-1 border-t border-gray-500"></div>
       </div>
 
       <Link href="/auth/login" className="btn-secondary text-center">
-        Ingresar
+        {t("loginTitle")}
       </Link>
     </form>
   );

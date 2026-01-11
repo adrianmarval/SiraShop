@@ -3,7 +3,10 @@
 import type { Address } from "@/interfaces";
 import prisma from "@/lib/prisma";
 
+import { getTranslations } from "next-intl/server";
+
 export const setUserAddress = async (address: Address, userId: string) => {
+  const t = await getTranslations("ServerActions");
   try {
     const newAddress = await createOrReplaceAddress(address, userId);
 
@@ -15,7 +18,7 @@ export const setUserAddress = async (address: Address, userId: string) => {
     console.log(error);
     return {
       ok: false,
-      message: "No se pudo grabar la dirección",
+      message: t("addressSaveError"),
     };
   }
 };

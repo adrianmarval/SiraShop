@@ -4,13 +4,16 @@ import { auth } from "@/auth.config";
 import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
+import { getTranslations } from "next-intl/server";
+
 export const changeUserRole = async (userId: string, role: string) => {
   const session = await auth();
+  const t = await getTranslations("ServerActions");
 
   if (session?.user.role !== "admin") {
     return {
       ok: false,
-      message: "Debe de estar autenticado como admin",
+      message: t("adminRequired"),
     };
   }
 
@@ -35,7 +38,7 @@ export const changeUserRole = async (userId: string, role: string) => {
     console.log(error);
     return {
       ok: false,
-      message: "No se pudo actualizar el role, revisar logs",
+      message: t("roleUpdateError"),
     };
   }
 };

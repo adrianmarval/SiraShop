@@ -13,31 +13,19 @@ interface PaidOrderEmailProps {
     size: string;
     image: string;
   }[];
+  translations: {
+    subject: string;
+    title: string;
+    text: string;
+    processing: string;
+    quantity: string;
+    totalPaid: string;
+    footer: string;
+  };
 }
 
-export const PaidOrderEmail = ({ orderId, total, locale = "es", products }: PaidOrderEmailProps) => {
-  const messages = {
-    es: {
-      subject: "¡Pago confirmado para tu pedido en Crowdfast Store!",
-      title: "¡Pago Recibido!",
-      text: "Hemos recibido el pago de tu pedido",
-      processing: "exitosamente. Pronto comenzaremos a procesar tu orden.",
-      quantity: "Cantidad:",
-      totalPaid: "Total Pagado:",
-      footer: "Si tienes alguna pregunta, no dudes en contactarnos.",
-    },
-    en: {
-      subject: "Payment confirmed for your order at Crowdfast Store!",
-      title: "Payment Received!",
-      text: "We have successfully received payment for your order",
-      processing: "We will start processing your order soon.",
-      quantity: "Quantity:",
-      totalPaid: "Total Paid:",
-      footer: "If you have any questions, feel free to contact us.",
-    },
-  };
-
-  const t = messages[locale] || messages.es;
+export const PaidOrderEmail = ({ orderId, total, locale = "es", products, translations }: PaidOrderEmailProps) => {
+  const t = translations;
   const currency = "USD";
 
   return (

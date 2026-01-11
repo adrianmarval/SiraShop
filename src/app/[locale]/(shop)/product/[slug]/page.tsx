@@ -36,8 +36,11 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
   };
 }
 
+import { getTranslations } from "next-intl/server";
+
 export default async function ProductBySlugPage({ params }: Props) {
   const { slug } = params;
+  const t = await getTranslations("Product");
   const product = await getProductBySlug(slug);
 
   if (!product) {
@@ -81,7 +84,7 @@ export default async function ProductBySlugPage({ params }: Props) {
         <AddToCart product={product} />
 
         {/* Descripción */}
-        <h3 className="text-sm font-bold">Descripción</h3>
+        <h3 className="text-sm font-bold">{t("description")}</h3>
         <p className="font-light">{product.description}</p>
       </div>
     </div>

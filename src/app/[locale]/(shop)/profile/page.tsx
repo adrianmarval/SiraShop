@@ -25,8 +25,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Mail, Shield } from "lucide-react";
 
+import { getTranslations } from "next-intl/server";
+
 export default async function ProfilePage() {
   const session = await auth();
+  const t = await getTranslations("Profile");
 
   if (!session?.user) {
     redirect("/");
@@ -60,27 +63,27 @@ export default async function ProfilePage() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
                   <Mail size={16} />
-                  <span>Email</span>
+                  <span>{t("email")}</span>
                 </div>
                 <p className="break-all text-foreground">{user.email}</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
                   <Shield size={16} />
-                  <span>Verificación</span>
+                  <span>{t("verification")}</span>
                 </div>
                 <p className="text-sm">
                   {user.emailVerified ? (
-                    <span className="font-medium text-green-600 dark:text-green-400">✓ Email verificado</span>
+                    <span className="font-medium text-green-600 dark:text-green-400">✓ {t("verified")}</span>
                   ) : (
-                    <span className="font-medium text-amber-600 dark:text-amber-400">Pendiente de verificación</span>
+                    <span className="font-medium text-amber-600 dark:text-amber-400">{t("pending")}</span>
                   )}
                 </p>
               </div>
             </div>
           </CardContent>
           <CardFooter className="flex items-center justify-center gap-2">
-            <p className="text-center text-xs text-muted-foreground">Perfil seguro • Datos protegidos</p>
+            <p className="text-center text-xs text-muted-foreground">{t("secure")}</p>
           </CardFooter>
         </Card>
       </div>

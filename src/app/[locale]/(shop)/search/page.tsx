@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 export const revalidate = 60; // 60 segundos
 
 import { getPaginatedProductsWithImages } from "@/actions";
@@ -15,6 +16,7 @@ interface Props {
 export default async function SearchPage({ searchParams }: Props) {
   const query = searchParams.query || "";
   const page = searchParams.page ? parseInt(searchParams.page) : 1;
+  const t = await getTranslations("Search");
 
   const { products, currentPage, totalPages } = await getPaginatedProductsWithImages({
     page,
@@ -29,7 +31,7 @@ export default async function SearchPage({ searchParams }: Props) {
 
   return (
     <>
-      <Title title="Resultados de búsqueda" subtitle={`Búsqueda: ${query}`} className="mb-2" />
+      <Title title={t("title")} subtitle={t("subtitle", { query })} className="mb-2" />
 
       <ProductGrid products={products} />
 

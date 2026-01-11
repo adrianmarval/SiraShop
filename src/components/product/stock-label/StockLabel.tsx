@@ -8,7 +8,10 @@ interface Props {
   slug: string;
 }
 
+import { useTranslations } from "next-intl";
+
 export const StockLabel = ({ slug }: Props) => {
+  const t = useTranslations("StockLabel");
   const [stock, setStock] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,7 +30,9 @@ export const StockLabel = ({ slug }: Props) => {
       {isLoading ? (
         <h1 className={` ${titleFont.className} animate-pulse bg-gray-200 text-lg font-bold antialiased`}>&nbsp;</h1>
       ) : (
-        <h1 className={` ${titleFont.className} text-lg font-bold antialiased`}>Stock: {stock}</h1>
+        <h1 className={` ${titleFont.className} text-lg font-bold antialiased`}>
+          {t("stock")}: {stock}
+        </h1>
       )}
     </>
   );

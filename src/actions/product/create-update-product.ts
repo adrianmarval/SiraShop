@@ -26,7 +26,10 @@ const productSchema = z.object({
   gender: z.nativeEnum(Gender),
 });
 
+import { getTranslations } from "next-intl/server";
+
 export const createUpdateProduct = async (formData: FormData) => {
+  const t = await getTranslations("ServerActions");
   const data = Object.fromEntries(formData);
   const productParsed = productSchema.safeParse(data);
 
@@ -80,7 +83,7 @@ export const createUpdateProduct = async (formData: FormData) => {
         // [https://url.jpg, https://url.jpg]
         const images = await uploadImages(formData.getAll("images") as File[]);
         if (!images) {
-          throw new Error("No se pudo cargar las imágenes, rollingback");
+          throw new Error(t("imageLoadError"));
         }
 
         await prisma.productImage.createMany({
@@ -108,7 +111,7 @@ export const createUpdateProduct = async (formData: FormData) => {
   } catch (error) {
     return {
       ok: false,
-      message: "Revisar los logs, no se pudo actualizar/crear",
+      message: t("productCreateUpdateError"),
     };
   }
 };

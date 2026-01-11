@@ -12,7 +12,10 @@ interface ProductToOrder {
   size: Size;
 }
 
+import { getTranslations } from "next-intl/server";
+
 export const placeOrder = async (productIds: ProductToOrder[], address: Address, locale: "es" | "en" = "es") => {
+  const t = await getTranslations({ locale, namespace: "ServerActions" });
   const session = await auth();
 
   const userId = session?.user.id;
@@ -21,7 +24,7 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address,
   if (!userId) {
     return {
       ok: false,
-      message: "No hay sesión de usuario",
+      message: t("noSession"),
     };
   }
 
@@ -49,7 +52,7 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address,
       const productQuantity = item.quantity;
       const product = products.find((product) => product.id === item.productId);
 
-      if (!product) throw new Error(`${item.productId} no existe - 500`);
+      if (!product) throw new Error(t("productNotExist", { id: item.productId }));
 
       const subTotal = product.price * productQuantity;
 
@@ -71,7 +74,7 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address,
         const productQuantity = productIds.filter((p) => p.productId === product.id).reduce((acc, item) => item.quantity + acc, 0);
 
         if (productQuantity === 0) {
-          throw new Error(`${product.id} no tiene cantidad definida`);
+          throw new Error(t("noQuantity", { id: product.id }));
         }
 
         return tx.product.update({
@@ -90,7 +93,7 @@ export const placeOrder = async (productIds: ProductToOrder[], address: Address,
       // Verificar valores negativos en las existencia = no hay stock
       updatedProducts.forEach((product) => {
         if (product.inStock < 0) {
-          throw new Error(`${product.title} no tiene inventario suficiente`);
+          throw new Error(t("insufficientInventory", { title: product.title }));
         }
       });
 

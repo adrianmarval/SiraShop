@@ -22,7 +22,10 @@ export async function authenticate(prevState: string | undefined, formData: Form
   }
 }
 
+import { getTranslations } from "next-intl/server";
+
 export const login = async (email: string, password: string) => {
+  const t = await getTranslations("ServerActions");
   try {
     await signIn("credentials", { email, password });
 
@@ -31,7 +34,7 @@ export const login = async (email: string, password: string) => {
     console.log(error);
     return {
       ok: false,
-      message: "No se pudo iniciar sesión",
+      message: t("loginError"),
     };
   }
 };
