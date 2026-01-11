@@ -37,6 +37,9 @@ export default async function OrdersPage() {
               <th scope="col" className="px-6 py-4 text-left text-sm font-medium text-gray-900">
                 {t("options")}
               </th>
+              <th scope="col" className="px-6 py-4 text-left text-sm font-medium text-gray-900">
+                {t("date")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -63,6 +66,9 @@ export default async function OrdersPage() {
                   <Link href={`/orders/${order.id}`} className="hover:underline">
                     {t("viewOrder")}
                   </Link>
+                </td>
+                <td className="whitespace-nowrap px-6 py-4 text-sm font-light text-gray-900">
+                  {order.createdAt.toISOString().split("T").at(0)}
                 </td>
               </tr>
             ))}

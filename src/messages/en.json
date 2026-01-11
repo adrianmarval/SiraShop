@@ -44,7 +44,8 @@
     "options": "Options",
     "paid": "Paid",
     "notPaid": "Not Paid",
-    "viewOrder": "View Order"
+    "viewOrder": "View Order",
+    "date": "Date"
   },
   "Order": {
     "orderNumber": "Order #",

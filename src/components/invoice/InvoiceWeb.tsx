@@ -59,8 +59,6 @@ export const InvoiceWeb = ({
     window.print();
   };
 
-  // ... (inside return)
-
   <div className="flex justify-between border-b border-gray-200 py-2">
     <span className="text-gray-600">{t.taxes.replace("{rate}", calculatedTaxRate.toString())}</span>
     <span className="font-medium text-gray-900">{currencyFormat(tax, locale)}</span>
