@@ -1,5 +1,4 @@
 import { Body, Container, Head, Heading, Html, Preview, Section, Text, Hr, Row, Column } from "@react-email/components";
-import Image from "next/image";
 import * as React from "react";
 
 interface PaidOrderEmailProps {
