@@ -40,7 +40,7 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
       ],
     });
 
-    const { ok , message} = await setTransactionId(orderId, transactionId);
+    const { ok, message } = await setTransactionId(orderId, transactionId);
     if (!ok) {
       throw new Error(message);
     }
